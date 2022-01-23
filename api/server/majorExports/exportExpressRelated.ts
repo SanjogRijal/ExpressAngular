@@ -8,7 +8,5 @@ const defineExports = () => {
     return importExpressDependencies;
 };
 
-module.exports = {
-    defineExports
-}
+export default defineExports;
 
