@@ -6,14 +6,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductService {
-  baseUrl: string;
+  BASE_URL: string;
+  SECONDARY_URL: string;
   constructor(private http: HttpClient ) { 
-    this.baseUrl = environment.baseUrl;
+    this.BASE_URL = environment.baseUrl;
+    this.SECONDARY_URL = "/products"
+    console.log(this.BASE_URL)
     this.getAllProducts = this.getAllProducts.bind(this);
   }
 
   getAllProducts =  () => {
-    return this.http.get(`http://localhost:8000/product/getAll`);
+    return this.http.get(`${this.BASE_URL}${this.SECONDARY_URL}/getAll`);
   }
 
   clearProducts = () => {

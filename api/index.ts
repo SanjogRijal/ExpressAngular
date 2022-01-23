@@ -1,7 +1,8 @@
 
-    import { initialStock } from './server/controllers/product/product.controller';
+import injectCors from './server/middlewares/corsInjector';
 import {routers} from './server/router';
-    import {createServer, useRouter, registerEnv,bodyParserMiddleWare} from './server/server';
+import {createServer, useRouter, registerEnv,bodyParserMiddleWare} from './server/server';
+import defineExports from './server/majorExports/exportExpressRelated';
 
     (()=> {
     createServer('8000');

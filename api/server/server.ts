@@ -14,16 +14,14 @@ let createServer =  (port: any)=> {
   });
 
   dbConnect();  
+  injectCors(app);
 }
 
 let useRouter =  (...routes: Array<any>) => {
 	routes.map((data) => {
     app.use(data);
   });
-
-  injectCors(app);
 }
-
 let bodyParserMiddleWare = () => {
   bodyParserInjection();
 }
