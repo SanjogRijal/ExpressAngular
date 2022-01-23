@@ -16,13 +16,20 @@ interface Product {
 })
 export class ProductDisplayComponent implements OnInit {
   allProducts: any;
-  constructor(private service: ProductService) { }
+  imgSource: any;
+  constructor(private service: ProductService) { 
+    this.imgSource = '/assets/images/coke.jpg'
+  }
 
   ngOnInit(): void {
     this.service.getAllProducts().subscribe((data) => 
     {
       this.allProducts= data;
     });
+  }
+
+  quantity(productName: string, quantity: any) {
+    console.log(productName, quantity);
   }
 
 }

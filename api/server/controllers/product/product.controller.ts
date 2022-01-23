@@ -1,9 +1,9 @@
 import {PRODUCT} from '../../models/product.schema';
 
 let initialStock = async () => {
-	let cokeStock = new PRODUCT({name: 'Coke', price: 10, stock:10});
-	let pepsiStock = new PRODUCT({name: 'Pepsi', price: 10, stock:10});
-	let dewStock = new PRODUCT({name: 'Dew', price: 10, stock:10});
+	let cokeStock = new PRODUCT({name: 'Coke', price: 20, stock:10});
+	let pepsiStock = new PRODUCT({name: 'Pepsi', price: 25, stock:10});
+	let dewStock = new PRODUCT({name: 'Dew', price: 30, stock:10});
 	await cokeStock.save().then((data:any) => {
 		console.log(data);
 	});
