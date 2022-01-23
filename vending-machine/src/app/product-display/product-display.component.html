@@ -1,10 +1,12 @@
 <div class = "product-display" *ngFor="let product of this.allProducts">
     <img [src]="imgSource" alt="here will be image">
-    Name: {{product.name}}
-    Stock: {{product.stock}}
-    Price: {{product.price}}
+    <p>Name: {{product.name}}</p>
+    <p>Stock: {{product.stock}}</p>
+    <p>Price: {{product.price}}</p>
 
     <form>
-        Enter Quantity of {{product.name}}: <input type="number" onchange="{() => {this.quantity(product.name,value)}}">
+        Enter Quantity of {{product.name}}: <input type="text" [value]=0 (input)=quantity(product,$event)>
     </form>
+
+    <p class="stock-exceed" *ngIf="greaterThanStock">Stock Limit Exceeded</p>
 </div>
