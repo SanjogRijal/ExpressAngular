@@ -1,3 +1,0 @@
-{"_id":{"$oid":"61ed68b70e56787ecd3dacf9"},"name":"Coke","price":10,"stock":10,"__v":0}
-{"_id":{"$oid":"61ed68b70e56787ecd3dacfa"},"name":"Pepsi","price":10,"stock":10,"__v":0}
-{"_id":{"$oid":"61ed68b70e56787ecd3dacfb"},"name":"Dew","price":10,"stock":10,"__v":0}
