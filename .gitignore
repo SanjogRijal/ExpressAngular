@@ -1,2 +1,3 @@
 /api/node_modules
 /vending-machine/node_modules
+/api/.env
