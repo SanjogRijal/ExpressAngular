@@ -1,5 +1,6 @@
-Here is a simple explanation for the project
+You need to create a .env file
+.env example:
 
-controller defines it's routes
-routes are registered in router.ts
-router.ts gets registered to server through index.ts
+MONGO_URL=mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.1.9
+MONGO_DBNAME=vending-machine
+BASE_URL=http://localhost:8000
